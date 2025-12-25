@@ -31,7 +31,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     # Links to your socials.  Comment or delete any you don't need/use. 
     discord_url = "https://discord.com"
     email_url = "mailto://user@domain"
-    github_url = "https://github.com/ghaniafza""
+    github_url = "https://github.com/ghaniafza"
     # tryhackme_url = "https://tryhackme.com"
 
     # NOTE: If you don't want to use RSS, comment or delete the following lines
