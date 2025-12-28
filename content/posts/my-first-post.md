@@ -1,7 +1,7 @@
-+++
-date = '2025-12-25T23:48:42+07:00'
-draft = false
-title = 'My First Post'
-+++
+---
+title: "My Post"
+date: 2025-12-27
+tags: ["hugo", "theme"]
+---
 
 Hi, this is my first post.
