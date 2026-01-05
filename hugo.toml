@@ -1,9 +1,7 @@
-baseURL = '/site/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'My Site'
 theme = "shibui"
-
-relativeURLs = true
 
 [params]
   author = "Ghania"
