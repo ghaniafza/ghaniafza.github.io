@@ -1,7 +1,9 @@
-baseURL = 'https://ghaniafza.github.io/site/'
+baseURL = '/site/'
 languageCode = 'en-us'
 title = 'My Site'
 theme = "shibui"
+
+relativeURLs = true
 
 [params]
   author = "Ghania"
