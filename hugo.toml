@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'ghaniafza.github.io/site/'
 languageCode = 'en-us'
 title = 'My Site'
 theme = "shibui"
