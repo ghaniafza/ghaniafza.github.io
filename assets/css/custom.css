@@ -1,0 +1,102 @@
+:root {
+  /* Base theme knobs */
+  --bg-h: 30;
+  --bg-s: 20%;
+  --bg-l: 80%;
+
+/* Background colors */
+--color-bg-primary: hsl(var(--bg-h) var(--bg-s) var(--bg-l));
+--color-bg-secondary: hsl(var(--bg-h) var(--bg-s) calc(var(--bg-l) - 2%));
+--color-border: hsl(var(--bg-h) var(--bg-s) calc(var(--bg-l) - 6%));
+--color-selection-bg: hsl(var(--bg-h) var(--bg-s) calc(var(--bg-l) - 13%));
+
+/* Text colors with WCAG-friendly contrast */
+/* Primary: ensures near-black on light bg and near-white on dark bg */
+--color-text-primary: hsl(
+  var(--bg-h) var(--bg-s) clamp(8%, calc(100% - var(--bg-l)), 92%)
+);
+
+/* Muted: softer but still >4.5:1 contrast */
+--color-text-muted: hsl(
+  var(--bg-h) var(--bg-s) clamp(30%, calc(85% - var(--bg-l)), 75%)
+);
+
+/* Code text: slightly brighter than muted */
+--color-text-code: hsl(
+  var(--bg-h) var(--bg-s) clamp(20%, calc(90% - var(--bg-l)), 85%)
+);
+
+/* Container for code blocks with language specified */
+.chroma, pre, code {
+  background-color: var(--color-bg-secondary) !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* Reset all generic tokens (keywords, operators, types) to flat text color and remove styling */
+.chroma span,
+.chroma .k, .chroma .o, .chroma .p, .chroma .kt, .chroma .nc, .chroma .nd {
+  color: var(--color-text-primary) !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+/* HIGH-CONTRAST STRICT HIGHLIGHTS */
+
+/* 1. Strings (e.g., '10.49.185.19', b'Am I right? ') */
+.chroma .s, .chroma .s1, .chroma .s2, .chroma .sb {
+  color: #8b3a1a !important; /* Deeper, richer terracotta */
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+/* 2. Numbers (e.g., 9002, 104, 0xc0d3) */
+.chroma .m, .chroma .mi, .chroma .mh, .chroma .mo {
+  color: #704455 !important; /* Darker berry / dusty plum */
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+/* 3. Function Names (e.g., ELF, connect, p32, sendlineafter) */
+.chroma .nf, .chroma .fm {
+  color: #2b4c5e !important; /* Deep ocean / high-contrast slate blue */
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+/* Disable line wrapping and enable horizontal scrolling for code blocks */
+.chroma, pre, code {
+  white-space: pre !important;
+  overflow-x: auto !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
+}
+
+/* Style the code block scrollbar container */
+pre::-webkit-scrollbar {
+  height: 12px; 
+  background-color: transparent; 
+}
+
+/* Style the scrollbar slider/thumb */
+pre::-webkit-scrollbar-thumb {
+  /* Generates a soft, perfectly blended medium-toned color */
+  background-color: color-mix(in srgb, var(--color-border) 75%, var(--color-text-primary)) !important;
+  border-radius: 6px; 
+  
+  /* Keeps the floating pill shape */
+  border: 3px solid var(--color-bg-secondary); 
+}
+
+/* Brightens slightly when hovered so it responds to the user */
+pre::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-text-muted) !important;
+}
+
+/* Firefox support */
+pre {
+  scrollbar-width: auto; 
+  scrollbar-color: color-mix(in srgb, var(--color-border) 75%, var(--color-text-primary)) transparent;
+}
+
+}
+
