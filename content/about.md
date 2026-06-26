@@ -5,4 +5,5 @@ type: "page"
 showreadingtime: false
 ---
 
-Hello, I'm Nia. I like computers and a lot of other things.
+I'm Nia.
+I like computers, among other things.
