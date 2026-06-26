@@ -283,7 +283,7 @@ Thankfully, we found a `ret` gadget ready to use at `0x401016`, so here's our fi
 from pwn import *
 
 BINARY = './pwn103-1644300337872.pwn103'
-HOST = '10.49.185.19'
+HOST = '10.48.154.125'
 PORT = 9003
 
 io = connect(HOST, PORT)
@@ -490,7 +490,7 @@ Notice that when we add them up, our payload is 48 + 40 + 8 = 96 bytes long, whi
 from pwn import *
 
 BINARY = './pwn104-1644300377109.pwn104'
-HOST = '10.49.185.19'
+HOST = '10.48.154.125'
 PORT = 9004
 
 exe = context.binary = ELF(BINARY)
