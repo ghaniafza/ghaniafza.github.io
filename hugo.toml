@@ -22,3 +22,7 @@ theme = "shibui"
   [markup.highlight]
     style = "bw"
 	noClasses = false
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
