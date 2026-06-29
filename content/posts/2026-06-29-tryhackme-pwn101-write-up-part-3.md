@@ -106,7 +106,7 @@ Before that, I wanted to mention that there's a [great video](https://www.youtub
 
 Okay, let's get into it.
 
-There are three general steps in order to do two's complement. Say we want to represent the decimal number 47, which is -47, in binary. The first thing we need to do is to take the binary representation of 47 (in this case I'll use 32 bits to do it), which is 
+There are three general steps in order to do two's complement. Say we want to represent the corresponding negative value of 47, which is -47, in binary. The first thing we need to do is to take the binary representation of 47 (in this case I'll use 32 bits to do it), which is 
 ```
 00000000000000000000000000101111
 ```
