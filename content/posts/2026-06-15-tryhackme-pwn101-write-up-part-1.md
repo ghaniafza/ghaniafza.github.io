@@ -4,6 +4,12 @@ date: 2026-06-15T20:13:00+07:00
 tags: ["ctf", "pwn"]
 ---
 
+After months of inaction, I figured I need a more structured approach to actually improve my CTF knowledge. I think the reason I was stuck is because I was unsure which category to focus on. You guessed it: everything seems interesting to me.
+
+Then I stumbled upon [this well-structured room](https://tryhackme.com/room/pwn101) made by Jopraveen on TryHackMe called PWN101, so I decided to give it a try. After doing the first 2 challenges I found joy throughout the learning process, so I decided to make a blog series on it and hopefully give myself accountability to actually finish it. Must of the stuff in the room is new to me, so will be a lot of imperfections and things that I might miss in my writeups, but I'll try to understand things to my best ability.
+
+Well, I've always wanted to start a blog anyway, so here comes my first post. ^^
+
 ## Challenge 1: Buffer Overflow
 
 > This should give you a start: 'AAAAAAAAAAA'
