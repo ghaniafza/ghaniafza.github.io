@@ -97,7 +97,7 @@ Similarly, we can have a really large integer, like 18391920 and represent it in
 1000110001010001101110000
 ```
 
-Or, interestingly, we can even represent _negative_ numbers in binary. How is that possible? Historically, there are a few different ways on how to achieve that, but the most reliable one today is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) method. In fact, this is what makes signed integers[^1] or `int` data type in C able store negative values. The "signed" term itself comes from the possible presence of negative sign, like -3, -90, -231, and so on.
+Or, interestingly, we can even represent _negative_ numbers in binary. How is that possible? Historically, there are a few different ways on how to achieve that, but the most reliable one today is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) method. In fact, this is what makes signed integers or `int` data type in C able store negative values. The "signed" term itself comes from the possible presence of negative sign, like -3, -90, -231, and so on.
 
 ### A little bit on two's complement
 Because the challenge we're dealing with has to do with binary representation of numbers, I think it won't harm to learn a little bit about the two's complement method. Besides that I find trying to re-rexplain things in my own words to help me learn better, just like a lot of us.
@@ -124,7 +124,7 @@ Lastly, we need to add 1 to it. Therefore, it becomes
 which is exactly the number `-47` in decimal. We can easily verify this using any binary-to-32-bit signed integer [converter](https://www.binaryconvert.com/convert_signed_int.html) online.
 
 ### A possibility for overflow
-A data type is limited by the size it can hold. That's why we see a lot of different data types, even for numbers, in C. For example, we can use `int` if we know we're only going to use it to store small integers. But for longer ones, like 10 million, an `int` is not going to be able to hold that; instead, we use `long long int`.
+A data type is limited by the size it can hold. That's why we see a lot of different data types, even for numbers, in C. For example, we can use `int` if we know we're only going to use it to store small integers. But for longer ones, like 17 billion, an `int` is not going to be able to store it; instead, we can use `long long int`.
 
 The reason comes back to the fact that everything in computer is stored in 1's and 0's. If we refer to the C/C++ documentation, an `int` data type is 32-bits in size. That means, it can represent any value (in binary) from
 ```
@@ -138,7 +138,7 @@ Now, using these 32 slots of binary digits, with each slot having two possible v
 
 We can use permutation for doing it, which gives us `2^(32)` = 4294967296 unique numbers.
 
-Because `int` is signed, we don't want start from 0 and end with `4294967295`. Rather, we start from the lowest possible negative value, which gives us the range `-2,147,483,648` until `2,147,483,647`, which still has exactly 4294967296 numbers within this range, except now we can store negative numbers.
+Because `int` is signed, we don't want start from 0 and end with `4294967295`. Rather, we start from the lowest possible negative value, which gives us the range `-2147483648` until `2147483647`, which still has exactly 4294967296 numbers within this range, except now we can store negative numbers.
 
 This is where things get more interesting. Since `int` is limited to this range, what happens if we try to assign an `int` variable with the value _just_ above the maximum value, like `2147483648`?
 
@@ -153,18 +153,18 @@ Now, we want to get the binary representation of 2147483648, so let's add 1 to i
 --------------------------------- +
 ...
 ```
-Because 1 + 1 = 2, in binary it will be exactly 10. The rightmost 1+1 will cause the digit next to it to carry over 1, and thus creating some sort of "domino" effect, which leaves the leftmost digit to change into 1.
+Because 1 + 1 = 2, in binary it will be exactly 10. The rightmost 1 + 1 will cause the digit next to it to carry over 1, and thus creating some sort of "domino" effect, which leaves the leftmost digit to change into 1.
 
 ```
 1111111111111111111111111111111  --> carry(s)
 01111111111111111111111111111111
 00000000000000000000000000000001
 --------------------------------- +
-10000000000000000000000000000001
+10000000000000000000000000000000
 ```
 As we see, the resulting number is
 ```
-10000000000000000000000000000001
+10000000000000000000000000000000
 ```
 We can ask ourselves, what does this value represent in a 32-bit signed integer? Well... It turns out the answer is exactly 
 ```
