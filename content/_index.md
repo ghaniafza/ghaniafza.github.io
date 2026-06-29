@@ -1,5 +1,8 @@
 ---
 title: "Home"
+layout: "page"
 ---
 
-الحمد لله
+aka Nia, Computer science @ IPB
+
+Email: gheniafx [at] gmail [dot] com
