@@ -572,4 +572,4 @@ $
 
 Flag: `THM{0h_n0o0o0o_h0w_Y0u_Won??}`
 
-[^1]: It took me days for the concept of return-address overwrite to finally click. Even then, I’m a beginner and there’s still a lot to learn. I think the best way to understand it is by learning from diverse resources, but if there’s one resource I would recommend, it’d be this article: [stack overflows](https://zhuanlan.zhihu.com/p/25816426) 
+[^1]: It took me days for the concept of return-address overwrite to finally click. That said, I’m a beginner and there’s still a lot to learn. I think the best way to understand it is by learning from diverse resources, but if there’s one resource I would recommend, it’d be this article: [stack overflows](https://zhuanlan.zhihu.com/p/25816426) 
