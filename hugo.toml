@@ -17,10 +17,10 @@ theme = "shibui"
     name = "Tags"
 	url = "/tags/"
 	weight = 2
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 3
+# [[menu.main]]
+#   name = "About"
+#   url = "/about/"
+#   weight = 3
 
 [markup]
   [markup.highlight]
